@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  base:
+    build:
+      context: ../../../Docker/Caronte
+      dockerfile: ./dockerfiles/base/Dockerfile
+      args:
+        USUARIO: tu_usuario
+    container_name: base_container
+    volumes:
+      - ./data:/root/data  # opcional: para persistir datos
+    networks:
+      - mi_red
+    restart: unless-stopped
+
+networks:
+  mi_red:
+    driver: bridge
