@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build:
-      context: /home/dangelo/Documentos/HLC/Docker/Caronte/proyectos/pbase/deploy
+      context: /home/dangelo/Escritorio/HLC/Docker/Caronte/proyectos/pbase/deploy
       dockerfile: Docker/Dockerfiles/sgbd/Dockerfile
       #args: 
       #- USUARIO=oliver
