@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Carga de las variables de entorno pasadas desde el docker-compose.yml
+set -e
+
 newUser (){
     useradd -rm -m /home/${USUARIO}/ -s /bin/bash ${USUARIO}
     echo "${USUARIO}:1234" | chpasswd

@@ -1,19 +1,10 @@
-version: '3.8'
-
 services:
-  base:
-    build:
-      context: ../../../../..
-      dockerfile: ./Docker/Dockerfiles/sgbd/Dockerfile
-      args:
-        USUARIO: tu_usuario
-    container_name: base_container
-    volumes:
-      - ./data:/root/data
-    networks:
-      - mi_red
-    restart: unless-stopped
-
-networks:
-  mi_red:
-    driver: bridge
+web:
+build: 
+context: /home/usuario/Docker/Caronte/proyectos/pbase/deploy
+dockerfile: proyectos/pbase/deploy/Dockerfile/pbase/Dockerfile
+#args: 
+#- USUARIO=oliver
+container_name: ctpbase
+environment:
+- USUARIO=dangelo
