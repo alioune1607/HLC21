@@ -16,3 +16,5 @@ make_ssh(){
     echo "--> SSH configurado en puerto 2345" >> /root/logs/informe.log
 }
 
+# exec /etc/init.d/ssh start &
+# exec /usr/sbin/sshd -D & # Dejar el ssh en segundo plano 
