@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -19,4 +18,4 @@ make_ssh(){
 }
 
 # exec /etc/init.d/ssh start &
-# exec /usr/sbin/sshd -D & # Dejar el ssh en segundo plano 
+# exec /usr/sbin/sshd -D & # Dejar el ssh en segundo plano
