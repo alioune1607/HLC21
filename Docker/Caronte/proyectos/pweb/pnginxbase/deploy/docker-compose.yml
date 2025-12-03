@@ -16,6 +16,7 @@ services:
     networks:
       netcarontewebnginx:
         ipv4_address: ${IP}
+    entrypoint: ["nginx", "-g", "daemon off;"]
 
 networks:
   netcarontewebnginx:

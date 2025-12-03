@@ -17,5 +17,7 @@ RUN chmod +x /root/admin/sweb/nginx/admin/start.sh
 # Solo mueve el index si existe
 RUN [ -f /var/www/html/index.nginx-debian.html ] && mv /var/www/html/index.nginx-debian.html /var/www/html/index.html || true
 
+RUN mkdir -p /root/logs
+
 WORKDIR /root/admin/sweb/nginx
 ENTRYPOINT [ "/root/admin/sweb/nginx/admin/start.sh" ]
