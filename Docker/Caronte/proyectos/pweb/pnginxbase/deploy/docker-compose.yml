@@ -1,0 +1,26 @@
+services:
+ servidor:
+    build: 
+      context: ${CONTEXTO}
+      dockerfile: ./dockerfiles/base/sweb/Dockerfile
+    image: aliounekane/nginx
+    container_name: ${CONTENEDOR}
+    hostname: ${HOSTNAME}
+    env_file:
+      - ./.env
+    volumes:
+      - ./logs:/root/logs
+    # - ./html:/var/www/html
+    ports:
+      - "${PORT_WEB}:80"
+    networks:
+      netcarontewebnginx:
+        ipv4_address: ${IP}
+
+networks:
+  netcarontewebnginx:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
+
