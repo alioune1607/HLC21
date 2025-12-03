@@ -1,0 +1,2 @@
+COPY ./common/id_ed25519.pub ./common
+COPY ./dockerfiles/base/admin .

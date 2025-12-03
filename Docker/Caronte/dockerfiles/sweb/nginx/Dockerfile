@@ -1,4 +1,4 @@
-FROM alioune/ubbase
+FROM aliounek/ubbase
 
 
 USER root
@@ -15,7 +15,7 @@ RUN mkdir -p /var/log/nginx
 EXPOSE 80
 
 RUN mkdir -p /root/admin/sweb/nginx
-COPY ./dockerfiles/sweb/nginx /root/admin/sweb/nginx
+COPY ./dockerfiles/base/sweb/nginx /root/admin/sweb/nginx
 RUN chmod +x /root/admin/sweb/nginx/admin/start.sh
 RUN mv /var/www/html/index.nginx-debian.html /var/www/html/index.html
 WORKDIR /root/admin/sweb/nginx
