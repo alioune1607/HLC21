@@ -1,4 +1,4 @@
-FROM dangelomagallanes/ubbase
+FROM aliounek/ubbase
 
 USER root
 RUN apt update && apt install -yq --no-install-recommends \
